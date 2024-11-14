@@ -1,0 +1,65 @@
+﻿@model Formularz.Models.Dane
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<form asp-action="Form" method="post" class="container mt-4 p-4 border rounded shadow-sm bg-light">
+    <h2 class="text-center mb-4">Formularz Rejestracji</h2>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div asp-validation-summary="All" class="alert alert-danger"></div>
+    }
+
+    <div class="form-group">
+        <label asp-for="Imie">Twoje imię:</label>
+        <input asp-for="Imie" class="form-control" placeholder="Wprowadź swoje imię" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Nazwisko">Twoje nazwisko:</label>
+        <input asp-for="Nazwisko" class="form-control" placeholder="Wprowadź swoje nazwisko" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email">Email:</label>
+        <input asp-for="Email" class="form-control" placeholder="Wprowadź swój email" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Haslo">Hasło:</label>
+        <input asp-for="Haslo" type="password" class="form-control" placeholder="Wprowadź hasło" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Potw_Haslo">Potwierdź hasło:</label>
+        <input asp-for="Potw_Haslo" type="password" class="form-control" placeholder="Powtórz hasło" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Nr_telefonu">Numer telefonu:</label>
+        <input asp-for="Nr_telefonu" class="form-control" placeholder="Wprowadź numer telefonu" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Wiek">Wiek:</label>
+        <input asp-for="Wiek" type="number" class="form-control" placeholder="Wprowadź swój wiek" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Miasto">Miasto:</label>
+        <input asp-for="Miasto" class="form-control" placeholder="Wprowadź swoje miasto" />
+    </div>
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">Zarejestruj się</button>
+        <button type="reset" class="btn btn-secondary ml-2">Wyczyść</button>
+    </div>
+
+    <form asp-action="Form" method="post" class="container mt-4 p-4 border rounded shadow-sm bg-light">
+    ...
+</form>
+
+
+<div style="height: 100px;"></div>
+
+</form>
